@@ -1,0 +1,7 @@
+div {
+  border: 2px solid red;
+}
+
+div:nth-child(2n) {
+  border: 2px solid green;
+}
