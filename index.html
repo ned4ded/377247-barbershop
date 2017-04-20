@@ -7,10 +7,10 @@
   <!-- <link rel="stylesheet" href="css/markup.css"> -->
 </head>
 <body>
-  <header class="main-header">
+  <header class= "main-header clearfix">
     <div class="container">
       <nav class="main-navigation">
-        <ul>
+        <ul class ="clearfix">
           <li>
             <a href="#">Информация</a>
           </li>
@@ -33,9 +33,9 @@
       </div>
     </div>
   </header>
-  <main class="container">
+  <main class="container clearfix">
     <div class="index-logo">
-      <img src="http://placehold.it/368x204" alt="Барбершоп &laquo;Бородинский&raquo;" width="368" height="204" />
+      <img src="img/BORODINSKI_Logo.png" alt="Барбершоп &laquo;Бородинский&raquo;" width="368" height="204" />
     </div>
     <section class="features">
       <div class="features-items">
@@ -57,7 +57,7 @@
         </p>
       </div>
     </section>
-    <div class="index-content">
+    <div class="index-content clearfix">
       <div class="index-content-left">
         <h2 class="index-content-title">Новости</h2>
         <ul class="news-preview">
@@ -79,14 +79,52 @@
       <div class="index-content-right">
         <h2 class="index-content-title">Галерея</h2>
         <div class="gallery">
-          <figure class="gallery-content">
+          
+          <!--  Заменил фигуру на див <figure class="gallery-content">
             <img src="http://placehold.it/286x164" width="286" height="164" alt="Изображение из фотогаллереи 1" />
-          </figure>
+          </figure>-->
           <button class="btn gallery-prev" type="button">Назад</button>
           <button class="btn gallery-next" type="button">Вперёд</button>
+            <div class="gallery-content">
+              <img src="http://placehold.it/286x164" width="286" height="164" alt="Изображение из фотогаллереи 1" />
+            </div>
+            <button class="btn gallery-prev" type="button">Назад</button>
+            <button class="btn gallery-next" type="button">Вперёд</button>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="index-content clearfix">
+        <div class="index-content-left">
+          <h2 class="index-content-title">Контактная информация</h2>
+          <p>
+            Барбершоп «Бородинский»<br />
+            Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br />
+            Телефон: +7 (812) 666-02-66
+          </p>
+          <p>
+            Время работы:<br />
+            пн — пт: с 10:00 до 22:00<br />
+            сб — вс: с 10:00 до 19:00
+          </p>
+          <a class="btn" href="#">Как проехать</a>
+          <a class="btn" href="#">Обратная связь</a>
+        </div>
+        <div class="index-content-right">
+          <h2 class="index-content-title">Записаться</h2>
+          <p>
+            Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
+          </p>
+          <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+            <input type="text" name="date" value="" placeholder="Дата">
+            <input type="text" name="time" value="" placeholder="Время">
+            <input type="text" name="name" value="" placeholder="Ваше имя">
+            <input type="tel" name="phone" value="" placeholder="Телефон">
+            <button class="btn" type="submit">Отправить</button>
+          </form>
+
+        </div>
+      </div>
+   
     <div class="index-content">
       <div class="index-content-left">
         <h2 class="index-content-title">Контактная информация</h2>
