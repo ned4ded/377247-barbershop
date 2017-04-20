@@ -148,7 +148,7 @@ b.features-name {
   margin-top: 79px;
   padding: 55px 80px 50px 80px;
   font-size: 10px;
-  border: 1px solid yellow;
+  /*border: 1px solid yellow;*/
 
 }
 
@@ -160,7 +160,7 @@ b.features-name {
   float: left;
   width: 353px;
   padding-right: 37px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 
 }
 
@@ -172,7 +172,7 @@ b.features-name {
 .index-content-right {
   float: right;
   width: 300px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   padding-left: 90px;
   padding-right: 0;
 }
