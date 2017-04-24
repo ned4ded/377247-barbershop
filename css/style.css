@@ -9,16 +9,16 @@ body {
   text-transform: uppercase;
   color: black;
   line-height: 24px;
-  background-color: rgb(35, 35, 35);
+  background-color: rgb(0, 0, 0);
+  background-image: url(../img/background-pic.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 }
 
 body h2 {
   font-size: 30px;
   line-height: 42px;
-}
-
-body ul {
-  list-style: none;
 }
 
 .clearfix::after {
@@ -27,9 +27,10 @@ body ul {
   clear: both;
 }
 
-.container, .index-content {
+.container {
     width: 960px;
     margin: 0 auto;
+    border: 1px solid red;
 }
 
 .main-header {
@@ -37,8 +38,9 @@ body ul {
 }
 
 .main-navigation ul {
-  padding: 0;
   margin: 0;
+  padding: 0 10px;
+  list-style: none;
   float: left;
 }
 
@@ -58,6 +60,7 @@ body ul {
 
 .user-block {
   float: right;
+  margin-right: 10px;
   padding: 30px;
   text-align: center;
 }
@@ -66,6 +69,208 @@ body ul {
   background-color: rgb(36, 36, 36);
 }
 
-.index-content {
+.index-logo {
+  margin: auto;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-flow: row;
+  width: calc(inherit-20px);
+  height: auto;
+  align-content: center;
+  justify-content: space-between;
+  /*margin-top: 30px;*/
+  /*solve the rendering of padding problem*/
+  padding:0 20px 35px;
+
+}
+
+.features p {
+  text-align: center;
+  color: white;
+}
+
+.features-name {
+  text-align: center;
+  color: white;
+}
+
+.features-name::after {
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: 17px;
+  height: 20px;
+  width: 20px;
   background-color: white;
+  transform: rotate(45deg);
+}
+
+.index-content {
+  max-width: 940px;
+  background-color: white;
+  background-image: url(../img/index-content-background.jpg);
+  background-position: top left;
+  background-repeat: repeat;
+  margin: 35px 10px 0;
+  padding: 55px 80px 50px;
+}
+
+.index-content-left {
+  float: left;
+  width: 380px;
+}
+
+.index-content-right {
+  float: right;
+  width: 300px;
+  padding-left: 100px;
+  background-image: url(../img/index-content-shadow.png);
+  background-repeat: no-repeat;
+  background-position: left, center;
+  background-size: auto;
+}
+
+.index-content:last-child {
+  margin-bottom: 65px;
+}
+
+.news-preview {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.index-content-title {
+  margin: 0 0 20px;
+}
+
+.index-content p, .index-content time {
+  margin: 0;
+}
+
+.index-content time  {
+  text-transform: lowercase;
+}
+
+.index-content li {
+  margin: 0 0 20px;
+}
+
+.gallery-content {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 38px;
+  max-width: 300px;
+  max-height: 178px;
+}
+
+.gallery-content img {
+  border: 7px solid grey;
+}
+
+.btn {
+  display: inline-block;
+  width: 140px;
+  padding: 10px 0;
+  background-color: black;
+  border: none;
+  font-size: inherit;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+  font-weight: inherit;
+  font-family: inherit;
+  vertical-align: middle;
+  text-transform: inherit;
+  line-height: inherit;
+}
+
+.btn:hover {
+  background-color: #663300;
+  cursor: pointer;
+}
+
+/*nothing about customizing outlines for input buttons */
+.btn:focus {
+  outline: none;
+}
+
+.gallery-next {
+  float: right;
+}
+
+.index-content-left > p {
+  padding-bottom: 20px;
+}
+
+/*How could i fix this jabberwocky?*/
+
+.index-content:last-child > .index-content-left > a:last-child {
+    margin-left: 20px;
+}
+
+.index-content-right >p {
+  padding-bottom: 23px;
+  border: 1px solid purple;
+}
+
+input {
+  float: left;
+  height: 39px;
+  width: 121px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  padding-left: 15px;
+  font-size: inherit;
+  text-align: left;
+  font-weight: inherit;
+  font-family: inherit;
+  text-transform: inherit;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+input:nth-child(2n) {
+  margin-left:20px;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.btn[type="submit"] {
+  width: 300px;
+}
+
+.main-footer {
+  background-color: rgb(36, 36, 36);
+  background-image: url(../img/footer-background.jpg);
+  background-position: top left;
+  background-repeat: repeat;
+}
+
+.footer-contacts {
+  float:left;
+  margin: 65px 10px 45px;
+  border: 1px solid blue;
+}
+
+.footer-social {
+  float:left;
+  margin: 65px 10px 53px 80px;
+  border: 1px solid blue;
+}
+
+.footer-copyright {
+  float:right;
+  margin: 65px 10px 53px;
+  border: 1px solid blue;
 }
