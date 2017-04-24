@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>Барбершоп &laquo;Бородинский&raquo;</title>
+  <!-- <link rel="stylesheet" href="css/style-unrepaired.css"> -->
   <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="css/markup.css"> -->
 </head>
+
 <body>
   <header class="main-header">
-    <div class="container">
+    <div class="container clearfix">
       <nav class="main-navigation">
-        <ul>
-          <li>
-            <a href="#">Информация</a>
-          </li>
-          <li>
-            <a href="#">Новости</a>
-          </li>
-          <li>
-            <a href="#">Прайс-лист</a>
-          </li>
-          <li>
-            <a href="#">Магазин</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
+        <ul class="clearfix">
+          <a href="#">
+            <li>
+            Информация
+            </li>
+          </a>
+          <a href="#">
+            <li>
+            Новости
+            </li>
+          </a>
+          <a href="#">
+            <li>
+            Прайс-лист
+            </li>
+          </a>
+          <a href="#">
+            <li>
+            Магазин
+            </li>
+          </a>
+          <a href="#">
+            <li>
+            Контакты
+            </li>
+          </a>
         </ul>
       </nav>
-      <div class="user-block">
-        <a class="login" href="#">Вход</a>
-      </div>
+      <!-- just try to replace A tag outside DIV -->
+        <div class="user-block">
+          <a class="login" href="#">Вход</a>
+        </div>
     </div>
   </header>
-  <main class="container">
+  <main class="container clearfix">
     <div class="index-logo">
-      <img src="http://placehold.it/368x204" alt="Барбершоп &laquo;Бородинский&raquo;" width="368" height="204" />
+      <img src="img/BORODINSKI_Logo.png" alt="Барбершоп &laquo;Бородинский&raquo;" width="368" height="204" />
     </div>
     <section class="features">
-      <div class="features-items">
-        <h2 class="feature-name">Быстро</h2>
+      <div class="features-item">
+        <h2 class="features-name">Быстро</h2>
         <p>
-          Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки!
+          Мы делаем свою работу быстро! Два часа<br /> пролетят незаметно и вы — счастливый<br /> обладатель стильной стрижки-минутки!
         </p>
       </div>
       <div class="features-item">
         <h2 class="features-name">Круто</h2>
         <p>
-          Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.
+          Забудьте, как вы стриглись раньше.<br /> Мы сделаем из вас звезду футбола или кино!<br /> Во всяком случае внешне.
         </p>
       </div>
       <div class="features-item">
         <h2 class="features-name">Дорого</h2>
         <p>
-          Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?
+          Наши мастера — профессионалы своего дела и<br /> не могут стоить дешево. К тому же, разве цена<br /> не дает определенный статус?
         </p>
       </div>
     </section>
-    <div class="index-content">
+    <div class="index-content clearfix">
       <div class="index-content-left">
         <h2 class="index-content-title">Новости</h2>
         <ul class="news-preview">
@@ -77,17 +91,17 @@
         <a class="btn" href="#">Все новости</a>
       </div>
       <div class="index-content-right">
-        <h2 class="index-content-title">Галерея</h2>
+        <h2 class="index-content-title">Фотогалерея</h2>
         <div class="gallery">
           <figure class="gallery-content">
-            <img src="http://placehold.it/286x164" width="286" height="164" alt="Изображение из фотогаллереи 1" />
+            <img src="http://placehold.it/286x164" width="286" height="164" alt="Изображение из фотогалереи 1" />
           </figure>
           <button class="btn gallery-prev" type="button">Назад</button>
           <button class="btn gallery-next" type="button">Вперёд</button>
         </div>
       </div>
     </div>
-    <div class="index-content">
+    <div class="index-content clearfix">
       <div class="index-content-left">
         <h2 class="index-content-title">Контактная информация</h2>
         <p>
@@ -115,7 +129,7 @@
     </div>
   </main>
   <footer class="main-footer">
-    <div class="container">
+    <div class="container clearfix">
       <section class="footer-contacts">
         Барбершоп «Бородинский»<br /> Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br />
         <a href="#">Как нас найти?</a><br /> Телефон: +7 (812) 666-02-66
