@@ -30,7 +30,7 @@ body h2 {
 .container {
     width: 960px;
     margin: 0 auto;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .main-header {
@@ -217,7 +217,6 @@ body h2 {
 
 .index-content-right >p {
   padding-bottom: 23px;
-  border: 1px solid purple;
 }
 
 input {
@@ -260,17 +259,17 @@ input:focus {
 .footer-contacts {
   float:left;
   margin: 65px 10px 45px;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 
 .footer-social {
   float:left;
   margin: 65px 10px 53px 80px;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 
 .footer-copyright {
   float:right;
   margin: 65px 10px 53px;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
