@@ -1,7 +1,71 @@
-div {
-  border: 2px solid red;
+body > *,
+body > * > *,
+body > * > * > * {
+  position: relative;
 }
 
-div:nth-child(2n) {
-  border: 2px solid green;
+body > *::before,
+body > * > *::before,
+body > * > * > *::before {
+  content: attr(class);
+  position: absolute;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Courier New", monotype;
 }
+
+body > * {
+  background: rgba(0, 128, 0, 0.2);
+  outline: 6px solid green;
+}
+
+body > *::before {
+  color: white;
+  background: green;
+  left: 0;
+  top: 0;
+}
+
+/*body > *::after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}*/
+
+body > * > * {
+  background: rgba(255, 45, 82, 0.2);
+  outline: 4px solid rgb(255, 45, 82);
+}
+
+body > * > *::before {
+  color: white;
+  background: rgb(255, 45, 82);
+  right: 0;
+  top: 0;
+}
+
+body > * > * > * {
+  background: rgba(71, 157, 236, 0.2);
+  outline: 2px solid blue;
+}
+
+body > * > * > *::before {
+  background: blue;
+  color: white;
+  bottom: -24px;
+  left: -2px;
+}
+
+/*.main-header::before {
+  content: ".main-header";
+}
+
+.container::before {
+  content: ".container";
+}
+
+.main-header .container::before {
+  top: auto;
+  bottom: -28px;
+}*/
