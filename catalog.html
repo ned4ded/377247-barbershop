@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Барбершоп &laquo;Бородинский&raquo;</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="css/markup-color-border.css"> -->
+  <link rel="stylesheet" href="css/markup-color-border.css">
 </head>
 
 <body class="not-index-page-background">
@@ -48,7 +48,7 @@
       </div>
     </div>
   </header>
-  <main class="container">
+  <main class="container clearfix">
     <div class="page-header clearfix">
       <h1>Средства для ухода</h1>
       <ul class="breadcrumbs clearfix">
@@ -91,8 +91,8 @@
             American crew
         </label>
       </div>
-      <h2>Группы товаров:</h2>
       <div class="filter-categories">
+        <h2>Группы товаров:</h2>
         <label>
             <input type="radio" name="category" id="category-1" value="1"/>
             Бритвенные принадлежности
@@ -105,12 +105,12 @@
             <input type="radio" name="category" id="category-3" value="3"/>
             Аксуссуары
         </label>
-        <input type="submit" class="btn" value="Отправить" />
+        <input type="submit" class="filter-submit btn" value="Показать" />
       </div>
     </form>
-    <section class="container">
+    <section class="shop-items-container">
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 1" width="220" height="165" />
+        <img src="img/1st-good-img.jpg" alt="Картинка товара 1" width="220" height="165" />
         <p>
           Набор для путешествий
         </p>
@@ -123,7 +123,7 @@
         </div>
       </article>
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 2" width="220" height="165" />
+        <img src="img/2nd-good-image.jpg" alt="Картинка товара 2" width="220" height="165" />
         <p>
           Увлажняющий кондиционер
         </p>
@@ -136,7 +136,7 @@
         </div>
       </article>
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 3" width="220" height="165" />
+        <img src="img/3rd-good-img.jpg" alt="Картинка товара 3" width="220" height="165" />
         <p>
           Гель для волос</p>
         <p>
@@ -148,7 +148,7 @@
         </div>
       </article>
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 4" width="220" height="165" />
+        <img src="img/4th-good-img.jpg" alt="Картинка товара 4" width="220" height="165" />
         <p>
           Глина для укладки волос
         </p>
@@ -161,7 +161,7 @@
         </div>
       </article>
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 5" width="220" height="165" />
+        <img src="img/5th-good-img.jpg" alt="Картинка товара 5" width="220" height="165" />
         <p>
           Гель для волос
         </p>
@@ -174,7 +174,7 @@
         </div>
       </article>
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 6" width="220" height="165" />
+        <img src="img/6th-good-img.jpg" alt="Картинка товара 6" width="220" height="165" />
         <p>
           Набор для бритья
         </p>
@@ -187,6 +187,21 @@
         </div>
       </article>
       <ul class="pagination">
+        <li class="btn-paggination">
+          1
+        </li>
+        <li class="btn-paggination  current-page">
+          2
+        </li>
+        <li class="btn-paggination">
+          3
+        </li>
+        <li class="btn-paggination">
+          4
+        </li>
+      </ul>
+      <!-- Uncomment and resolve cascading problem -->
+      <!-- <ul class="pagination">
         <li>
           <a href="sitemap.html" class="btn">1</a>
         </li>
@@ -199,7 +214,7 @@
         <li>
           <a href="sitemap.html" class="btn">4</a>
         </li>
-      </ul>
+      </ul> -->
     </section>
   </main>
   <footer class="main-footer">
