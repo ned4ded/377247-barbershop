@@ -1,119 +1,634 @@
-.main-header {
+body {
+  /*min-width: 1122px;
+  min-height: 1750px;*/
+  min-width: 1200px;
+  /*max-width: 2560px;*/
+  position: static;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  line-height: 24px;
+  background-color: rgb(0, 0, 0);
+  background-image: url(../img/background-pic.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  /*Try to find the difference between browser's text rendering and photoshop decision
+  letter-spacing: ;*/
+}
 
+.not-index-page-background, .index-content {
+  background-image: url(../img/index-content-background.jpg);
+  /*Here is took .jpg background image because of smaller size of file instead of .png*/
+  background-position: top left;
+  background-repeat: repeat;
+}
+
+body h2, body h1 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .container {
+    width: 960px;
+    margin: 0 auto;
+}
 
+.main-header {
+  background-color: black;
+}
+
+.main-header a {
+  float: left;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.shop-logo {
+  height: 80px;
+  float:left;
+  display: flex;
+  align-items: center;
+}
+
+.shop-logo a {
+  font-size: 0;
+  line-height: 0;
 }
 
 .main-navigation {
+  float:left;
+}
 
+.main-navigation ul {
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  float: left;
+}
+
+.main-navigation li {
+  padding: 30px 20px 30px 20px;
+  vertical-align: middle;
+  float:left;
+}
+
+.current-main-nav-name {
+  padding-bottom: 26px;
+  border-bottom: 4px solid white;
+  cursor: default;
 }
 
 .user-block {
-
+  float: right;
+  margin-right: 10px;
+  padding: 30px;
+  text-align: center;
 }
 
-.login {
-
+.main-navigation li:hover, .user-block:hover {
+  background-color: rgb(36, 36, 36);
 }
 
 .index-logo {
-
+  margin: auto;
+  margin-top: 60px;
+  text-align: center;
 }
 
 .features {
+  display: flex;
+  flex-flow: row;
+  width: calc(inherit-20px);
+  height: auto;
+  align-content: center;
+  justify-content: space-between;
+  /*margin-top: 30px;*/
+  /*solve the rendering of padding problem*/
+  padding:0 20px 35px;
 
 }
 
-.features-items {
-
-}
-
-.feature-name {
-
-}
-
-.features-item {
-
+.features p {
+  text-align: center;
+  color: white;
 }
 
 .features-name {
-
+  text-align: center;
+  color: white;
 }
 
-.index-content {
+.features-name::after {
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: 17px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  transform: rotate(45deg);
+}
 
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  float: left;
+  margin-left: 15px;
+}
+
+/*3-level tag nesting, should i fix it?*/
+.breadcrumbs > li > * {
+  color: black;
+  text-decoration: none;
+  padding-left: 25px;
+}
+
+.breadcrumbs > li:first-child > * {
+  padding-left: 0;
+}
+
+.breadcrumbs li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-top: 7px;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+span.current-breadcrumbs-item {
+  color: rgb(171,169, 167);
+}
+
+
+.breadcrumbs li:first-child {
+  margin-left: 0;
+}
+
+/*HERE IS CHECKBOXES AND RADIOBTNS STYLE
+  И ДОПИЛИ ПЕРЕНОС СТРОК, Т.К. В ШАБЛОНЕ ПОЛНАЯ ХРЕНЬ С ЭТИМ
+*/
+input[type="checkbox"], input[type="radio"], label {
+  display: block;
+  margin-left: 0;
+}
+
+label {
+  margin-left: 0;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.filter-manufecturer label::before {
+  content: "";
+  position: relative;
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+  margin-left: 0;
+  margin-right: 23px;
+}
+
+.filter-manufecturer label:hover, .filter-categories label:hover {
+  color: rgb(102, 61, 21);
+}
+
+input[type="checkbox"], input[type="radio"] {
+  visibility: hidden;
+  position: absolute;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  height: 16px;
+  width: 2px;
+  background: black;
+  margin-left: 9px;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 16px;
+  background: black;
+  margin-top: 6px;
+  margin-left: 2px;
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked::after, input[type="checkbox"]:checked::before {
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled::after, input[type="checkbox"]:disabled::before {
+  background-color: grey;
+}
+
+/*.filter-manufecturer label:has(input[type="checkbox"]:disabled)::before {
+  border-color: grey;
+}*/
+
+.filter-manufecturer label::has(input) {
+  color: grey;
+}
+
+.filter-categories label::before {
+  content: "";
+  position: relative;
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-left: 0;
+  margin-right: 23px;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  visibility: visible;
+  display: block;
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: black;
+  margin-left: 6px;
+  margin-top: 3px;
+}
+/*HERE IS ENDING CHECKBOXES AND RADIOBTNS STYLES*/
+
+
+/*HERE IS STARTING CATALOG PAGE ITEMS FLOATING */
+
+
+.filter-box {
+  width: 220px;
+  float: left;
+}
+
+.filter-box div {
+  margin-top: 55px;
+  width: auto;
+  height: 260px;
+}
+
+div.filter-categories {
+  margin-top: 48px;
+}
+
+.filter-box h2 {
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.shop-items-container {
+  max-width: 700px;
+  margin-top: 55px;
+  float: right;
+}
+
+.shop-item {
+  width: 220px;
+  height: 288px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.shop-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.shop-item:nth-child(n+4) {
+  margin-bottom: 0;
+}
+
+.shop-item p {
+  line-height: 18px;
+  margin: 0 16px 0;
+}
+
+.shop-item p:first-of-type {
+  text-transform: none;
+}
+
+.price-and-buy {
+  width: 187px; height: 44px;
+  margin: 12px auto 16px;
+}
+
+.price-and-buy > a.btn {
+  width: 78px;
+  float: right;
+}
+
+.item-price {
+  display: inline-block;
+  text-align: center;
+  color: black;
+  width: 109px; height: 34px;
+  padding-top: 10px;
+  background-color: rgb(229, 229, 229);
+}
+
+section>ul {
+  display: block;
+  float: left;
+  margin-top: 44px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.btn-paggination {
+  float: left;
+  display: block;
+  width: 43px;
+  height: 27px;
+  padding-top: 16px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-right: 9px;
+}
+
+.current-page {
+  background-color: white;
+  color: black;
+}
+/*HERE IS ENDING CATALOG PAGE ITEMS FLOATING */
+
+.index-content {
+  max-width: 940px;
+  background-color: white;
+  margin: 35px 10px 0;
+  padding: 55px 80px 50px;
 }
 
 .index-content-left {
-
-}
-
-.index-content-title {
-
-}
-
-.news-preview {
-
-}
-
-.btn {
-
+  float: left;
+  width: 380px;
 }
 
 .index-content-right {
-
+  float: right;
+  width: 300px;
+  padding-left: 100px;
+  background-image: url(../img/index-content-shadow.png);
+  background-repeat: no-repeat;
+  background-position: left, center;
+  background-size: auto;
 }
 
-.gallery {
+.index-content:last-child {
+  margin-bottom: 65px;
+}
 
+.news-preview {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.index-content-title {
+  margin: 0 0 20px;
+}
+
+.index-content p, .index-content time {
+  margin: 0;
+}
+
+.index-content time  {
+  text-transform: lowercase;
+}
+
+.index-content li {
+  margin: 0 0 20px;
 }
 
 .gallery-content {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 38px;
+  max-width: 300px;
+  max-height: 178px;
+}
+
+.gallery-content img {
+  border: 7px solid white;
+}
+
+.btn {
+  display: inline-block;
+  width: 140px;
+  padding: 10px 0;
+  background-color: black;
+  border: none;
+  font-size: inherit;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+  font-weight: inherit;
+  font-family: inherit;
+  vertical-align: middle;
+  text-transform: inherit;
+  line-height: inherit;
+}
+
+.filter-submit {
+  width: 112px;
+  margin-top: 50px;
 
 }
 
-.gallery-prev {
+.btn:hover {
+  background-color: #663300;
+  cursor: pointer;
+}
 
+/*nothing about customizing outlines for input buttons */
+.btn:focus {
+  outline: none;
 }
 
 .gallery-next {
-
+  float: right;
 }
 
-.appointment-form {
+.index-content-left > p {
+  padding-bottom: 20px;
+}
 
+/*How could i fix this jabberwocky?*/
+/*3-level tag nesting, should i fix it?*/
+.index-content:last-child > .index-content-left > a:last-child {
+    margin-left: 20px;
+}
+
+.index-content-right >p {
+  padding-bottom: 23px;
+}
+
+input[name="date"],
+input[name="time"],
+input[name="name"],
+input[name="phone"] {
+  float: left;
+  height: 39px;
+  width: 121px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  padding-left: 15px;
+  font-size: inherit;
+  text-align: left;
+  font-weight: inherit;
+  font-family: inherit;
+  text-transform: inherit;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+/*input:-ms-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+input::-ms-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+input::-moz-placeholder {
+  color: rgb(0, 0, 0);
+}*/
+
+input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+input:nth-child(2n) {
+  margin-left:20px;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.appointment-form > .btn {
+  width: 300px;
 }
 
 .main-footer {
+  background-color: rgb(36, 36, 36);
+  background-image: url(../img/footer-background.jpg);
+  /*Here is took .jpg background image because of smaller size of file instead of .png*/
+  background-position: top left;
+  background-repeat: repeat;
+  color: white;
+}
 
+.main-footer a {
+    color: white;
+}
+
+.main-footer p {
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+  margin-bottom: 19px;
+  text-align: center;
 }
 
 .footer-contacts {
-
+  float:left;
+  width: 310px;
+  margin: 65px 10px 45px;
 }
 
 .footer-social {
-
-}
-
-.social-btn {
-
-}
-
-.social-btn-vk {
-
-}
-
-.social-btn-fb {
-
-}
-
-.social-btn-inst {
-
+  float:left;
+  margin: 65px 10px 53px 80px;
 }
 
 .footer-copyright {
+  float:right;
+  margin: 65px 10px 53px;
+}
 
+.social-btn {
+  display: block;
+  font-size: 0;
+  float: left;
+  background-color: black;
+  height: 43px;
+  width: 43px;
+  margin-right: 6px;
+}
+
+.social-btn:last-child {
+  margin: 0;
+}
+
+.social-btn-vk {
+  background-image: url(../img/vk-logo.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.social-btn-fb {
+  background-image: url(../img/facebook-logo.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.social-btn-inst {
+  background-image: url(../img/insta-logo.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }

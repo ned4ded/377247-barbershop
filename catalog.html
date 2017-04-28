@@ -5,32 +5,42 @@
   <meta charset="utf-8">
   <title>Барбершоп &laquo;Бородинский&raquo;</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="css/markup.css"> -->
+  <link rel="stylesheet" href="css/markup-color-border.css">
 </head>
 
-<body>
-  <header class="main-header">
-    <div class="container">
+<body class="not-index-page-background">
+  <header class="main-header clearfix">
+    <div class="container clearfix">
       <div class="shop-logo">
-        <a href="index.html"><img src="http://placehold.it/150x23" alt="Барбершоп &laquo;Бородинский&raquo;" width="150" height="23" /></a>
+        <a href="index.html"><img src="img/main-nav-logo.png" alt="Барбершоп &laquo;Бородинский&raquo;" width="111" height="24" /></a>
       </div>
-      <nav class="main-navigation">
-        <ul>
-          <li>
-            <a href="#">Информация</a>
-          </li>
-          <li>
-            <a href="#">Новости</a>
-          </li>
-          <li>
-            <a href="#">Прайс-лист</a>
-          </li>
-          <li>
-            <a href="#" class="current-main-nav-item">Магазин</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
+      <nav class="main-navigation clearfix">
+        <ul class="clearfix">
+          <a href="index.html">
+            <li>
+            Информация
+            </li>
+          </a>
+          <a href="#">
+            <li>
+            Новости
+            </li>
+          </a>
+          <a href="#">
+            <li>
+            Прайс-лист
+            </li>
+          </a>
+          <a >
+            <li>
+            <span class="current-main-nav-name">Магазин</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+            Контакты
+            </li>
+          </a>
         </ul>
       </nav>
       <div class="user-block">
@@ -38,15 +48,15 @@
       </div>
     </div>
   </header>
-  <main class="container">
-    <div class="page-header">
+  <main class="container clearfix">
+    <div class="page-header clearfix">
       <h1>Средства для ухода</h1>
-      <ul class="breadcrumbs">
+      <ul class="breadcrumbs clearfix">
         <li>
-          <a href="#">Главная</a>
+          <a href="index.html">Главная</a>
         </li>
         <li>
-          <a href="#">Магазин</a>
+          <a href=".html">Магазин</a>
         </li>
         <li>
           <span class="current-breadcrumbs-item">Средства для ухода</span>
@@ -59,48 +69,48 @@
         <label>
             <input type="checkbox" name="manufecturer"  id="manufecturer-1" value="1"/>
             Baxter of California
-          </label>
+        </label>
         <label>
             <input type="checkbox" name="manufecturer"  id="manufecturer-2" value="2"/>
             Mr Natty
-          </label>
+        </label>
         <label>
             <input type="checkbox" name="manufecturer"  id="manufecturer-3" value="3"/>
             Suavecito
-          </label>
+        </label>
         <label>
             <input type="checkbox" name="manufecturer"  id="manufecturer-4" value="4"/>
             Malin+Goetz
-          </label>
+        </label>
         <label>
             <input type="checkbox" name="manufecturer"  id="manufecturer-5" value="5"/>
             Murray's
-          </label>
+        </label>
         <label>
             <input type="checkbox" name="manufecturer"  id="manufecturer-6" value="6"/>
             American crew
-          </label>
+        </label>
       </div>
-      <h2>Группы товаров:</h2>
       <div class="filter-categories">
+        <h2>Группы товаров:</h2>
         <label>
             <input type="radio" name="category" id="category-1" value="1"/>
             Бритвенные принадлежности
-          </label>
+        </label>
         <label>
-            <input type="radio" name="category" id="category-2" value="2"/>
+            <input type="radio" name="category" id="category-2" value="2" checked/>
             Средства для ухода
-          </label>
+        </label>
         <label>
             <input type="radio" name="category" id="category-3" value="3"/>
             Аксуссуары
-          </label>
-        <input type="submit" class="btn" value="Отправить" />
+        </label>
+        <input type="submit" class="filter-submit btn" value="Показать" />
       </div>
     </form>
-    <section class="container">
+    <section class="shop-items-container">
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 1" width="220" height="165" />
+        <img src="img/1st-good-img.jpg" alt="Картинка товара 1" width="220" height="165" />
         <p>
           Набор для путешествий
         </p>
@@ -109,11 +119,11 @@
         </p>
         <div class="price-and-buy">
           <span class="item-price">2900 руб.</span>
-          <a href="#" class="btn">Купить</a>
+          <a href="catalog-item.html" class="btn">Купить</a>
         </div>
       </article>
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 2" width="220" height="165" />
+        <img src="img/2nd-good-image.jpg" alt="Картинка товара 2" width="220" height="165" />
         <p>
           Увлажняющий кондиционер
         </p>
@@ -126,7 +136,7 @@
         </div>
       </article>
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 3" width="220" height="165" />
+        <img src="img/3rd-good-img.jpg" alt="Картинка товара 3" width="220" height="165" />
         <p>
           Гель для волос</p>
         <p>
@@ -138,7 +148,7 @@
         </div>
       </article>
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 4" width="220" height="165" />
+        <img src="img/4th-good-img.jpg" alt="Картинка товара 4" width="220" height="165" />
         <p>
           Глина для укладки волос
         </p>
@@ -151,7 +161,7 @@
         </div>
       </article>
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 5" width="220" height="165" />
+        <img src="img/5th-good-img.jpg" alt="Картинка товара 5" width="220" height="165" />
         <p>
           Гель для волос
         </p>
@@ -164,7 +174,7 @@
         </div>
       </article>
       <article class="shop-item">
-        <img src="http://placehold.it/220x165" alt="Картинка товара 6" width="220" height="165" />
+        <img src="img/6th-good-img.jpg" alt="Картинка товара 6" width="220" height="165" />
         <p>
           Набор для бритья
         </p>
@@ -177,6 +187,21 @@
         </div>
       </article>
       <ul class="pagination">
+        <li class="btn-paggination">
+          1
+        </li>
+        <li class="btn-paggination  current-page">
+          2
+        </li>
+        <li class="btn-paggination">
+          3
+        </li>
+        <li class="btn-paggination">
+          4
+        </li>
+      </ul>
+      <!-- Uncomment and resolve cascading problem -->
+      <!-- <ul class="pagination">
         <li>
           <a href="#" class="btn">1</a>
         </li>
@@ -189,13 +214,13 @@
         <li>
           <a href="#" class="btn">4</a>
         </li>
-      </ul>
+      </ul> -->
     </section>
   </main>
   <footer class="main-footer">
-    <div class="container">
+    <div class="container clearfix">
       <section class="footer-contacts">
-        Барбершоп «Бородинский»<br /> Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br />
+        Барбершоп «Бородинский»<br /> Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br />
         <a href="#">Как нас найти?</a><br /> Телефон: +7 (812) 666-02-66
       </section>
       <section class="footer-social">
@@ -210,7 +235,7 @@
         <p>
           Разработано:
         </p>
-        <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="btn" href="https://htmlacademy.ru">HTMLAcademy.ru</a>
       </section>
     </div>
   </footer>
