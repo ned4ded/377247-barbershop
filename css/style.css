@@ -1,119 +1,15 @@
-.main-header {
-
+body {
+  font-size: 14px;
+  line-height: 24px;
+  color: black;
+  font-weight: bold;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  text-transform: uppercase;
 }
 
-.container {
+/*Here is used heading styles which differs from a style guide because of our index markup: we've got a lot of h2 headings with style of h1.*/
 
-}
-
-.main-navigation {
-
-}
-
-.user-block {
-
-}
-
-.login {
-
-}
-
-.index-logo {
-
-}
-
-.features {
-
-}
-
-.features-items {
-
-}
-
-.feature-name {
-
-}
-
-.features-item {
-
-}
-
-.features-name {
-
-}
-
-.index-content {
-
-}
-
-.index-content-left {
-
-}
-
-.index-content-title {
-
-}
-
-.news-preview {
-
-}
-
-.btn {
-
-}
-
-.index-content-right {
-
-}
-
-.gallery {
-
-}
-
-.gallery-content {
-
-}
-
-.gallery-prev {
-
-}
-
-.gallery-next {
-
-}
-
-.appointment-form {
-
-}
-
-.main-footer {
-
-}
-
-.footer-contacts {
-
-}
-
-.footer-social {
-
-}
-
-.social-btn {
-
-}
-
-.social-btn-vk {
-
-}
-
-.social-btn-fb {
-
-}
-
-.social-btn-inst {
-
-}
-
-.footer-copyright {
-
+h1, h2 {
+  font-size: 30px;
+  line-height: 42px;
 }
