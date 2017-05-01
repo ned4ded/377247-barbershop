@@ -5,15 +5,15 @@ body {
   margin: 0;
   padding: 0;
 
-  font-size: 14px;
   font-weight: bold;
+  font-size: 14px;
   line-height: 24px;
-  color: black;
   font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: black;
   text-transform: uppercase;
 
-  background-color: rgb(117, 117, 117);
-  /*background-image: url(../img/background-pic.png);*/
+  background-color: black;
+  background-image: url(../img/background-pic.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -31,7 +31,758 @@ h2 {
   line-height: 30px;
 }
 
-.features-name {
+.not-index-page-background,
+.index-content {
+  background-image: url(../img/index-content-background.jpg);
+  background-repeat: repeat;
+  /*Here is took .jpg background image because of smaller size of file instead of .png*/
+  background-position: top left;
+}
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: black;
+}
+
+.main-navigation {
+  display: block;
+  float: left;
+  padding: 0 10px;
+}
+
+.main-navigation ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-navigation li {
+  position: relative;
+
+  display: block;
+  float: left;
+}
+
+.current-main-nav-name {
+  padding-bottom: 26px;
+
+  border-bottom: 4px solid white;
+  cursor: default;
+}
+.user-block {
+  float: right;
+  padding-right: 10px;
+}
+
+
+.main-navigation li:hover,
+.user-block:hover {
+  background-color: rgb(36, 36, 36);
+}
+
+.main-navigation a,
+.user-block a {
+  display: block;
+  padding: 24px 20px 28px 20px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+/* the value 23 of right-left padding is for perfect pixel comparing with layout
+
+  Default values is 20px;
+*/
+
+.user-block a {
+  padding-right: 23px;
+  padding-left: 23px;
+}
+
+/*CHECK THIS*/
+.shop-logo {
+  display: flex;
+  align-items: center;
+  float: left;
+  height: 80px;
+}
+
+.shop-logo a {
+  font-size: 0;
+  line-height: 0;
+}
+/*CHECK THIS*/
+
+.index-logo {
+  width: 378px;
+  height: 204px;
+  margin: auto;
+  margin-top: 60px;
+  padding-left: 19px;
+}
+
+.features {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-content: center;
+  width: 940px;
+  height: auto;
+  margin: 20px 10px 0;
+}
+
+.features-item {
+  box-sizing: border-box;
+  width: 300px;
+}
+
+.features-name,
+.index-content-title {
   font-size: 30px;
   line-height: 42px;
+}
+
+.features-name {
+  margin: 0;
+
+  text-align: center;
+  color: white;
+}
+
+.features-name::after {
+  content: "";
+
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  margin-top: 12px;
+
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+/*Here is pixel perfecting */
+.features-item:first-child .features-name {
+  padding-right: 3px;
+}
+
+.features-item:nth-child(2) .features-name {
+  padding-right: 1px;
+}
+
+.features-item:last-child .features-name {
+  padding-right: 1px;
+}
+
+.features-item:first-child p {
+  padding-right: 5px;
+}
+
+.features-item:nth-child(2) p {
+  padding-left: 1px;
+}
+
+.features-item:last-child p {
+  padding-right: 5px;
+}
+
+/*Ending of pixel perfecting*/
+
+.features p {
+  margin-top: 27px;
+  margin-bottom: 44px;
+
+  text-align: center;
+  color: white;
+}
+
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.breadcrumbs li {
+  float: left;
+  margin-left: 15px;
+}
+
+/*3-level tag nesting, should i fix it?*/
+.breadcrumbs > li > * {
+  padding-left: 25px;
+
+  color: black;
+  text-decoration: none;
+}
+
+.breadcrumbs > li:first-child > * {
+  padding-left: 0;
+}
+
+.breadcrumbs li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+span.current-breadcrumbs-item {
+  color: rgb(171,169, 167);
+}
+
+
+.breadcrumbs li:first-child {
+  margin-left: 0;
+}
+
+/*HERE IS CHECKBOXES AND RADIOBTNS STYLE
+  И ДОПИЛИ ПЕРЕНОС СТРОК, Т.К. В ШАБЛОНЕ ПОЛНАЯ ХРЕНЬ С ЭТИМ
+*/
+input[type="checkbox"],
+input[type="radio"],
+label {
+  display: block;
+  margin-left: 0;
+}
+
+label {
+  margin-top: 10px;
+  margin-left: 0;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: black;
+  text-transform: uppercase;
+}
+
+.filter-manufecturer label::before {
+  content: "";
+  position: relative;
+
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-right: 23px;
+  margin-left: 0;
+
+  border: 2px solid black;
+}
+
+.filter-manufecturer label:hover,
+.filter-categories label:hover {
+  color: rgb(102, 61, 21);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+
+  visibility: hidden;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 2px;
+  height: 16px;
+  margin-top: -1px;
+  margin-left: 9px;
+
+  background: black;
+  transform: rotate(45deg);
+  visibility: hidden;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 16px;
+  height: 2px;
+  margin-top: 6px;
+  margin-left: 2px;
+
+  background: black;
+  transform: rotate(45deg);
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::after,
+input[type="checkbox"]:checked::before {
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled::after,
+input[type="checkbox"]:disabled::before {
+  background-color: grey;
+}
+
+/*.filter-manufecturer label:has(input[type="checkbox"]:disabled)::before {
+  border-color: grey;
+}*/
+
+.filter-manufecturer label::has(input) {
+  color: grey;
+}
+
+.filter-categories label::before {
+  content: "";
+  position: relative;
+
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-right: 23px;
+  margin-left: 0;
+
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-top: 3px;
+  margin-left: 6px;
+
+  background: black;
+  border-radius: 50%;
+  visibility: visible;
+}
+/*HERE IS ENDING CHECKBOXES AND RADIOBTNS STYLES*/
+
+
+/*HERE IS STARTING CATALOG PAGE ITEMS FLOATING */
+
+
+.filter-box {
+  float: left;
+  width: 220px;
+}
+
+.filter-box div {
+  width: auto;
+  height: 260px;
+  margin-top: 55px;
+}
+
+div.filter-categories {
+  margin-top: 48px;
+}
+
+.filter-box h2 {
+  margin: 0;
+  margin-bottom: 35px;
+
+  line-height: 22px;
+}
+
+.shop-items-container {
+  float: right;
+  max-width: 700px;
+  margin-top: 55px;
+}
+
+.shop-item {
+  float: left;
+  width: 220px;
+  height: 288px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  background-color: white;
+}
+
+.shop-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.shop-item:nth-child(n+4) {
+  margin-bottom: 0;
+}
+
+.shop-item p {
+  margin: 0 16px 0;
+
+  line-height: 18px;
+}
+
+.shop-item p:first-of-type {
+  text-transform: none;
+}
+
+.price-and-buy {
+  width: 187px;
+  height: 44px;
+  margin: 12px auto 16px;
+}
+
+.price-and-buy > a.btn {
+  float: right;
+  width: 78px;
+}
+
+.item-price {
+  display: inline-block;
+  width: 109px;
+  height: 34px;
+  padding-top: 10px;
+
+  text-align: center;
+  color: black;
+
+  background-color: rgb(229, 229, 229);
+}
+
+section > ul {
+  display: block;
+  float: left;
+  margin-top: 44px;
+  padding: 0;
+
+  list-style: none;
+  text-align: left;
+}
+
+.btn-paggination {
+  display: block;
+  float: left;
+  width: 43px;
+  height: 27px;
+  margin-right: 9px;
+  padding-top: 16px;
+
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: white;
+
+  background-color: black;
+}
+
+.current-page {
+  color: black;
+
+  background-color: white;
+}
+/*HERE IS ENDING CATALOG PAGE ITEMS FLOATING */
+
+.index-content {
+  max-width: 940px;
+  margin: 35px 10px 0;
+  padding: 45px 80px 50px;
+
+  background-color: white;
+}
+
+.index-content:last-child {
+  margin-bottom: 65px;
+}
+
+.index-content-left {
+  float: left;
+  width: 380px;
+}
+
+.index-content-right {
+  float: right;
+  width: 300px;
+  padding-left: 100px;
+
+  background-image: url(../img/index-content-shadow.png);
+  background-repeat: no-repeat;
+  background-position: left, center;
+  background-size: auto;
+}
+
+.news-preview {
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.index-content-title {
+  margin: 0 0 20px;
+}
+
+/*Pixel PERFECTIZING */
+.index-content:first-child > .index-content-title {
+  margin: 0 0 22px;
+}
+/*END OF PIXEL PERFECTIZING */
+
+.index-content p,
+.index-content time {
+  margin: 0;
+}
+
+.index-content time {
+  text-transform: lowercase;
+}
+
+.index-content li {
+  margin: 0 0 20px;
+}
+
+
+
+.gallery-content {
+  display: block;
+  max-width: 300px;
+  max-height: 178px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.gallery-content img {
+  border: 7px solid white;
+}
+
+.btn {
+  display: inline-block;
+  width: 140px;
+  padding: 10px 0;
+
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  vertical-align: middle;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-transform: inherit;
+  text-decoration: none;
+
+  background-color: black;
+  border: none;
+}
+
+.filter-submit {
+  width: 112px;
+  margin-top: 50px;
+}
+
+.btn:hover {
+  background-color: #663300;
+  cursor: pointer;
+}
+
+/*nothing about customizing outlines for input buttons */
+.btn:focus {
+  outline: none;
+}
+
+.gallery-next {
+  float: right;
+}
+
+.index-content-left > p {
+  padding-bottom: 20px;
+}
+
+/*3-level tag nesting, should i fix it?*/
+.index-content:last-child > .index-content-left > a:last-child {
+  margin-left: 20px;
+}
+
+/*Pixel perfecting*/
+.index-content:last-child > .index-content-right {
+  width: 301px;
+  padding-left: 99px;
+}
+/*Pixel perfecting end*/
+
+.index-content-right > p {
+  padding-bottom: 22px;
+}
+
+.appointment-form input {
+  float: left;
+  width: 121px;
+  height: 37px;
+  margin-bottom: 18px;
+  padding-left: 15px;
+
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: left;
+  text-transform: inherit;
+
+  border: 2px solid black;
+}
+
+/*Pixel perfecting*/
+.appointment-form input:nth-child(n+3) {
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+/*Pixel perfecting end*/
+
+.appointment-form input::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+/*.appointment-form input:-ms-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.appointment-form input::-ms-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.appointment-form input::-moz-placeholder {
+  color: rgb(0, 0, 0);
+}*/
+
+.appointment-form input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.appointment-form input:nth-child(2n) {
+  margin-left: 20px;
+}
+
+.appointment-form input:focus {
+  outline: 0;
+}
+
+.appointment-form > .btn {
+  width: 300px;
+}
+
+.main-footer {
+  color: white;
+
+  background-color: rgb(36, 36, 36);
+  background-image: url(../img/footer-background.jpg);
+  background-repeat: repeat;
+  /*Here is took .jpg background image because of smaller size of file instead of .png*/
+  background-position: top left;
+}
+
+.main-footer a {
+  color: white;
+}
+
+.main-footer p {
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0;
+
+  line-height: 100%;
+  text-align: center;
+}
+
+.footer-contacts {
+  float: left;
+  width: 310px;
+  margin: 57px 10px 45px;
+}
+
+.footer-contacts p {
+  padding: 0;
+
+  line-height: 24px;
+  text-align: left;
+}
+
+.footer-social {
+  float: left;
+  margin: 62px 10px 53px 80px;
+}
+
+.footer-copyright {
+  float: right;
+  margin: 62px 10px 53px;
+}
+
+.social-btn {
+  display: block;
+  float: left;
+  width: 43px;
+  height: 43px;
+  margin-right: 6px;
+
+  font-size: 0;
+
+  background-color: black;
+}
+
+.social-btn:last-child {
+  margin: 0;
+}
+
+.social-btn-vk {
+  background-image: url(../img/vk-logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+}
+
+.social-btn-fb {
+  background-image: url(../img/facebook-logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+}
+
+.social-btn-inst {
+  background-image: url(../img/insta-logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+}
+
+.social-btn-vk:hover,
+.social-btn-fb:hover,
+.social-btn-inst:hover {
+  filter: invert(100%);
+}
+
+/*inversing htmlacademy btn has a blue background*/
+
+.footer-copyright a.btn:hover {
+  color: black;
+
+  background-color: white;
 }
