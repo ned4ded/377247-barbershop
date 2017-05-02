@@ -1,151 +1,225 @@
 body {
-  /*min-width: 1122px;
-  min-height: 1750px;*/
-  min-width: 1200px;
-  /*max-width: 2560px;*/
   position: static;
+
+  min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-size: 14px;
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
+
   font-weight: bold;
-  text-transform: uppercase;
-  color: black;
+  font-size: 14px;
   line-height: 24px;
-  background-color: rgb(0, 0, 0);
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: black;
+  text-transform: uppercase;
+
+  background-color: black;
   background-image: url(../img/background-pic.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
-  /*Try to find the difference between browser's text rendering and photoshop decision
-  letter-spacing: ;*/
 }
 
-.not-index-page-background, .index-content {
-  background-image: url(../img/index-content-background.jpg);
-  /*Here is took .jpg background image because of smaller size of file instead of .png*/
-  background-position: top left;
-  background-repeat: repeat;
-}
-
-body h2, body h1 {
+h1 {
   font-size: 30px;
   line-height: 42px;
 }
 
+h2 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.not-index-page-background,
+.index-content {
+  background-image: url(../img/index-content-background.jpg);
+  background-repeat: repeat;
+  /*Here is took .jpg background image because of smaller size of file instead of .png*/
+  background-position: top left;
+}
+
 .clearfix::after {
   content: "";
+
   display: table;
   clear: both;
 }
 
 .container {
-    width: 960px;
-    margin: 0 auto;
+  width: 960px;
+  margin: 0 auto;
 }
 
 .main-header {
   background-color: black;
 }
 
-.main-header a {
-  float: left;
-  font-size: 16px;
-  line-height: 20px;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-}
-
-.shop-logo {
-  height: 80px;
-  float:left;
-  display: flex;
-  align-items: center;
-}
-
-.shop-logo a {
-  font-size: 0;
-  line-height: 0;
-}
-
 .main-navigation {
-  float:left;
+  display: block;
+  float: left;
+  margin: 0 10px;
 }
 
 .main-navigation ul {
+  display: block;
   margin: 0;
-  padding: 0 10px;
+  padding: 0;
+
   list-style: none;
-  float: left;
 }
 
 .main-navigation li {
-  padding: 30px 20px 30px 20px;
-  vertical-align: middle;
-  float:left;
-}
+  position: relative;
 
-.current-main-nav-name {
-  padding-bottom: 26px;
-  border-bottom: 4px solid white;
-  cursor: default;
+  display: block;
+  float: left;
 }
 
 .user-block {
   float: right;
   margin-right: 10px;
-  padding: 30px;
-  text-align: center;
 }
 
-.main-navigation li:hover, .user-block:hover {
+
+.main-navigation li:hover,
+.user-block:hover {
   background-color: rgb(36, 36, 36);
 }
 
+.main-navigation a,
+.user-block a {
+  display: block;
+  padding: 24px 20px 28px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+a.current-main-nav-name {
+  margin: 0 20px;
+  padding: 24px 0 24px;
+
+  border-bottom: 4px solid white;
+  cursor: default;
+}
+
+/* the value 23 of right-left padding is for perfect pixel comparing with layout
+
+  Default values is 20px;
+*/
+
+.user-block a {
+  padding-right: 23px;
+  padding-left: 23px;
+}
+
+.shop-logo {
+  display: block;
+  align-items: center;
+  float: left;
+  width: 121px;
+  height: 49px;
+  margin-left: 10px;
+  padding: 23px 0 0 20px;
+}
+
+.shop-logo a {
+  display: block;
+
+  font-size: 0;
+  line-height: 0;
+}
+
 .index-logo {
+  width: 378px;
+  height: 204px;
   margin: auto;
   margin-top: 60px;
-  text-align: center;
+  padding-left: 20px;
 }
 
 .features {
   display: flex;
   flex-flow: row;
-  width: calc(inherit-20px);
-  height: auto;
-  align-content: center;
   justify-content: space-between;
-  /*margin-top: 30px;*/
-  /*solve the rendering of padding problem*/
-  padding:0 20px 35px;
-
+  align-content: center;
+  width: 940px;
+  height: auto;
+  margin: 20px 10px 0;
 }
 
-.features p {
-  text-align: center;
-  color: white;
+.features-item {
+  box-sizing: border-box;
+  width: 300px;
+}
+
+.features-name,
+.index-content-title {
+  font-size: 30px;
+  line-height: 42px;
 }
 
 .features-name {
+  margin: 0;
+
   text-align: center;
   color: white;
 }
 
 .features-name::after {
   content: "";
+
   display: block;
-  margin: auto;
-  margin-top: 17px;
-  height: 20px;
   width: 20px;
+  height: 20px;
+  margin: auto;
+  margin-top: 12px;
+
   background-color: white;
   transform: rotate(45deg);
 }
 
+/*Here is pixel perfecting */
+.features-item:first-child .features-name {
+  padding-right: 3px;
+}
+
+.features-item:nth-child(2) .features-name {
+  padding-right: 1px;
+}
+
+.features-item:last-child .features-name {
+  padding-right: 1px;
+}
+
+.features-item:first-child p {
+  padding-right: 5px;
+}
+
+.features-item:nth-child(2) p {
+  padding-left: 1px;
+}
+
+.features-item:last-child p {
+  padding-right: 5px;
+}
+/*Ending of pixel perfecting*/
+
+.features p {
+  margin-top: 27px;
+  margin-bottom: 44px;
+
+  text-align: center;
+  color: white;
+}
+
+
 .breadcrumbs {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -154,11 +228,22 @@ body h2, body h1 {
   margin-left: 15px;
 }
 
-/*3-level tag nesting, should i fix it?*/
-.breadcrumbs > li > * {
+.page-header {
+  margin: 0 10px 0;
+}
+
+.page-header h1 {
+  margin: 55px 0 21px;
+
+  line-height: 1;
+}
+
+/*3-level tag nesting*/
+.breadcrumbs li > * {
+  padding-left: 25px;
+
   color: black;
   text-decoration: none;
-  padding-left: 25px;
 }
 
 .breadcrumbs > li:first-child > * {
@@ -168,16 +253,21 @@ body h2, body h1 {
 .breadcrumbs li:not(:first-child)::before {
   content: "";
   position: absolute;
+
   display: block;
-  margin-top: 7px;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
+  margin-top: 9px;
+  margin-left: 1px;
+
   background-color: black;
   transform: rotate(45deg);
 }
 
 span.current-breadcrumbs-item {
   color: rgb(171,169, 167);
+
+  cursor: default;
 }
 
 
@@ -185,153 +275,77 @@ span.current-breadcrumbs-item {
   margin-left: 0;
 }
 
-/*HERE IS CHECKBOXES AND RADIOBTNS STYLE
-  И ДОПИЛИ ПЕРЕНОС СТРОК, Т.К. В ШАБЛОНЕ ПОЛНАЯ ХРЕНЬ С ЭТИМ
-*/
-input[type="checkbox"], input[type="radio"], label {
-  display: block;
-  margin-left: 0;
+/*Pixel-perfecting starts*/
+.breadcrumbs li:nth-child(3n),
+.breadcrumbs li:nth-child(4n) {
+  margin-left: 19px;
 }
 
-label {
-  margin-left: 0;
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
-  font-weight: bold;
-  color: black;
+.breadcrumbs li:nth-child(3n) > * {
+  padding-left: 26px;
 }
 
-.filter-manufecturer label::before {
-  content: "";
-  position: relative;
-  display: block;
-  float: left;
-  width: 16px;
-  height: 16px;
-  border: 2px solid black;
-  margin-left: 0;
-  margin-right: 23px;
+.breadcrumbs li:nth-child(4n) > * {
+  padding-left: 27px;
 }
-
-.filter-manufecturer label:hover, .filter-categories label:hover {
-  color: rgb(102, 61, 21);
-}
-
-input[type="checkbox"], input[type="radio"] {
-  visibility: hidden;
-  position: absolute;
-}
-
-input[type="checkbox"]::after {
-  content: "";
-  visibility: hidden;
-  display: block;
-  position: absolute;
-  height: 16px;
-  width: 2px;
-  background: black;
-  margin-left: 9px;
-  margin-top: -1px;
-  transform: rotate(45deg);
-}
-
-input[type="checkbox"]::before {
-  content: "";
-  visibility: hidden;
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 16px;
-  background: black;
-  margin-top: 6px;
-  margin-left: 2px;
-  transform: rotate(45deg);
-}
-
-input[type="checkbox"]:checked::after, input[type="checkbox"]:checked::before {
-  visibility: visible;
-}
-
-input[type="checkbox"]:disabled::after, input[type="checkbox"]:disabled::before {
-  background-color: grey;
-}
-
-/*.filter-manufecturer label:has(input[type="checkbox"]:disabled)::before {
-  border-color: grey;
-}*/
-
-.filter-manufecturer label::has(input) {
-  color: grey;
-}
-
-.filter-categories label::before {
-  content: "";
-  position: relative;
-  display: block;
-  float: left;
-  width: 16px;
-  height: 16px;
-  border: 2px solid black;
-  border-radius: 50%;
-  margin-left: 0;
-  margin-right: 23px;
-}
-
-input[type="radio"]:checked::after {
-  content: "";
-  visibility: visible;
-  display: block;
-  position: absolute;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  background: black;
-  margin-left: 6px;
-  margin-top: 3px;
-}
-/*HERE IS ENDING CHECKBOXES AND RADIOBTNS STYLES*/
+/*Pixel-perfecting ends*/
 
 
 /*HERE IS STARTING CATALOG PAGE ITEMS FLOATING */
 
 
 .filter-box {
-  width: 220px;
   float: left;
+  width: 220px;
+  margin-left: 10px;
 }
 
 .filter-box div {
-  margin-top: 55px;
   width: auto;
   height: 260px;
+  /*margin-top: 55px;*/
 }
 
-div.filter-categories {
-  margin-top: 48px;
+/*Pixel-perfecting starts*/
+.filter-manufecturer {
+  margin-top: 50px;
 }
+
+.filter-categories {
+  margin-top: 52px;
+}
+
+/*Pixel-perfecting ends*/
 
 .filter-box h2 {
-  line-height: 22px;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
+
+  line-height: 1;
 }
+
+/*Pixel-perfecting starts*/
+.filter-categories h2 {
+  margin-bottom: 28px;
+}
+/*Pixel-perfecting ends*/
 
 .shop-items-container {
-  max-width: 700px;
-  margin-top: 55px;
   float: right;
+  max-width: 700px;
+  margin-top: 53px;
+  margin-right: 10px;
+  margin-bottom: 49px;
 }
-
 .shop-item {
-  width: 220px;
-  height: 288px;
   float: left;
+  width: 220px;
+  height: 286px;
   margin-right: 20px;
   margin-bottom: 20px;
+
   background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .shop-item:nth-child(3n) {
@@ -343,104 +357,334 @@ div.filter-categories {
 }
 
 .shop-item p {
-  line-height: 18px;
   margin: 0 16px 0;
-}
 
+  line-height: 18px;
+  color: black;
+}
+.shop-item a.item-name-link {
+  text-decoration: none;
+}
 .shop-item p:first-of-type {
+  margin-top: 6px;
+
   text-transform: none;
 }
 
+
 .price-and-buy {
-  width: 187px; height: 44px;
-  margin: 12px auto 16px;
+  width: 187px;
+  height: 44px;
+  margin: 13px auto 15px;
 }
 
-.price-and-buy > a.btn {
-  width: 78px;
+/*.price-and-buy > a.btn {
   float: right;
-}
+  width: 78px;
+}*/
 
 .item-price {
   display: inline-block;
+  width: 109px;
+  height: 34px;
+  padding-top: 10px;
+
   text-align: center;
   color: black;
-  width: 109px; height: 34px;
-  padding-top: 10px;
+
   background-color: rgb(229, 229, 229);
 }
 
-section>ul {
+/*pp starts*/
+.item-price {
+  width: 106px;
+  height: 34px;
+  padding-top: 9px;
+  padding-left: 3px;
+}
+
+
+
+.shop-item:first-child .item-price,
+.shop-item:nth-child(6n) .item-price,
+.item-information .item-price {
+  width: 105px;
+  padding-left: 4px;
+}
+
+.shop-item:first-child .item-price::first-letter,
+.shop-item:nth-child(6n) .item-price::first-letter,
+.item-information .item-price::first-letter {
+  letter-spacing: 3px;
+}
+
+
+.price-and-buy .btn {
+  float: right;
+  width: 76px;
+  padding-top: 9px;
+  padding-left: 2px;
+}
+/*pp ends*/
+
+.pagination {
   display: block;
   float: left;
-  margin-top: 44px;
+  margin: 45px 0 0;
   padding: 0;
+
   list-style: none;
+  line-height: 1;
   text-align: left;
 }
 
-.btn-paggination {
+.pagination li {
   float: left;
+  margin-right: 7px;
+}
+
+/*.btn-pagination {
   display: block;
+  float: left;
   width: 43px;
   height: 27px;
+  margin-right: 9px;
   padding-top: 16px;
+
   font-size: 14px;
   line-height: 14px;
   text-align: center;
-  background-color: black;
   color: white;
-  margin-right: 9px;
+
+  background-color: black;
+}*/
+
+.pagination .btn {
+  display: block;
+  float: left;
+  width: 43px;
+  height: 27px;
+  padding: 14px 0 2px;
+
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  color: white;
+
+  background-color: black;
 }
 
 .current-page {
-  background-color: white;
-  color: black;
+  filter: invert(100%);
 }
+
 /*HERE IS ENDING CATALOG PAGE ITEMS FLOATING */
+
+/*HERE IS CHECKBOXES AND RADIOBTNS STYLE
+  И ДОПИЛИ ПЕРЕНОС СТРОК, Т.К. В ШАБЛОНЕ ПОЛНАЯ ХРЕНЬ С ЭТИМ
+*/
+.filter-box input[type="checkbox"],
+.filter-box input[type="radio"],
+.filter-box label {
+  display: block;
+  margin-left: 0;
+}
+
+.filter-box label {
+  margin-top: 10px;
+  margin-left: 0;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 27px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: black;
+  text-transform: uppercase;
+}
+
+/*pp starts*/
+.filter-categories label {
+  display: inline-block;
+  width: 125px;
+  margin: 0;
+  padding-top: 3px;
+  padding-left: 43px;
+
+  line-height: 18px;
+}
+
+.filter-categories label:first-of-type,
+.filter-categories label:nth-of-type(2n) {
+  margin-bottom: 16px;
+}
+
+.filter-categories label:nth-of-type(3n) {
+  padding-top: 4px;
+}
+/*pp ends*/
+
+.filter-manufecturer label::before {
+  content: "";
+  position: relative;
+
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  margin-right: 23px;
+  margin-left: 0;
+
+  border: 2px solid black;
+}
+
+.filter-manufecturer label:hover,
+.filter-categories label:hover {
+  color: rgb(102, 61, 21);
+}
+
+.filter-box input[type="checkbox"],
+.filter-box input[type="radio"] {
+  position: absolute;
+
+  visibility: hidden;
+}
+
+.filter-box input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 2px;
+  height: 16px;
+  margin-top: 2px;
+  margin-left: 9px;
+
+  background: black;
+  transform: rotate(45deg);
+  visibility: hidden;
+}
+
+.filter-box input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 16px;
+  height: 2px;
+  margin-top: 9px;
+  margin-left: 2px;
+
+  background: black;
+  transform: rotate(45deg);
+  visibility: hidden;
+}
+
+.filter-categories input[type="radio"]::before {
+  content: "";
+  position: static;
+
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 0;
+
+  border: 2px solid black;
+  border-radius: 50%;
+  visibility: visible;
+}
+
+.filter-categories input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  margin-left: 6px;
+
+  background: black;
+  border-radius: 50%;
+  visibility: visible;
+}
+
+.filter-box input[type="checkbox"]:checked::after,
+.filter-box input[type="checkbox"]:checked::before {
+  visibility: visible;
+}
+
+
+.filter-box input[type="checkbox"]:disabled::after,
+.filter-box input[type="checkbox"]:disabled::before {
+  background-color: grey;
+}
+
+/*SOLVE THIS */
+/*.filter-manufecturer label:has(input[type="checkbox"]:disabled)::before {
+  border-color: grey;
+}*/
+
+/*.filter-manufecturer label::has(input) {
+  color: grey;
+}*/
+
+/*HERE IS ENDING CHECKBOXES AND RADIOBTNS STYLES*/
 
 .index-content {
   max-width: 940px;
-  background-color: white;
   margin: 35px 10px 0;
-  padding: 55px 80px 50px;
-}
+  padding: 45px 80px 50px 81px;
 
-.index-content-left {
-  float: left;
-  width: 380px;
-}
-
-.index-content-right {
-  float: right;
-  width: 300px;
-  padding-left: 100px;
-  background-image: url(../img/index-content-shadow.png);
-  background-repeat: no-repeat;
-  background-position: left, center;
-  background-size: auto;
+  background-color: white;
 }
 
 .index-content:last-child {
   margin-bottom: 65px;
 }
 
+.index-content-left {
+  float: left;
+  width: 384px;
+}
+
+.index-content-right {
+  float: right;
+  width: 300px;
+  padding-left: 95px;
+
+  background-image: url(../img/index-content-shadow.png);
+  background-repeat: no-repeat;
+  background-position: left, center;
+  background-size: auto;
+}
+
 .news-preview {
-  list-style: none;
-  padding: 0;
   margin: 0;
   margin-bottom: 28px;
+  padding: 0;
+
+  list-style: none;
 }
 
 .index-content-title {
-  margin: 0 0 20px;
+  margin: 0 0 22px;
 }
 
-.index-content p, .index-content time {
+/*PP starts */
+div.index-content .index-content-right .index-content-title {
+  padding-left: 3px;
+}
+
+/*PP ends*/
+
+.index-content p,
+.index-content time {
   margin: 0;
 }
 
-.index-content time  {
+.index-content time {
   text-transform: lowercase;
 }
 
@@ -448,13 +692,15 @@ section>ul {
   margin: 0 0 20px;
 }
 
+
+
 .gallery-content {
   display: block;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 38px;
   max-width: 300px;
   max-height: 178px;
+  margin: 0;
+  margin-bottom: 38px;
+  padding: 0;
 }
 
 .gallery-content img {
@@ -465,28 +711,41 @@ section>ul {
   display: inline-block;
   width: 140px;
   padding: 10px 0;
-  background-color: black;
-  border: none;
-  font-size: inherit;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  text-align: center;
+
   font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
   font-family: inherit;
   vertical-align: middle;
+  text-align: center;
+  color: rgb(255, 255, 255);
   text-transform: inherit;
-  line-height: inherit;
+  text-decoration: none;
+
+  background-color: black;
+  border: none;
 }
+
 
 .filter-submit {
   width: 112px;
-  margin-top: 50px;
-
+  margin-top: 48px;
 }
+
+/*pp starts*/
+.filter-submit {
+  padding: 9px 27px 10px 33px;
+}
+/*pp ends*/
 
 .btn:hover {
   background-color: #663300;
   cursor: pointer;
+}
+
+.current-page:hover {
+  background-color: black;
+  cursor: default;
 }
 
 /*nothing about customizing outlines for input buttons */
@@ -502,58 +761,70 @@ section>ul {
   padding-bottom: 20px;
 }
 
-/*How could i fix this jabberwocky?*/
 /*3-level tag nesting, should i fix it?*/
 .index-content:last-child > .index-content-left > a:last-child {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
-.index-content-right >p {
-  padding-bottom: 23px;
+/*Pixel perfecting*/
+.index-content:last-child > .index-content-right {
+  width: 301px;
+  padding-left: 94px;
+}
+/*Pixel perfecting end*/
+
+.index-content-right > p {
+  padding-bottom: 22px;
 }
 
-input[name="date"],
-input[name="time"],
-input[name="name"],
-input[name="phone"] {
+.appointment-form input {
   float: left;
-  height: 39px;
   width: 121px;
-  margin-bottom: 20px;
-  border: 2px solid black;
+  height: 37px;
+  margin-bottom: 18px;
   padding-left: 15px;
-  font-size: inherit;
-  text-align: left;
+
   font-weight: inherit;
+  font-size: inherit;
   font-family: inherit;
+  text-align: left;
   text-transform: inherit;
+
+  border: 2px solid black;
 }
 
-input::-webkit-input-placeholder {
+/*Pixel perfecting*/
+.appointment-form input:nth-child(n+3) {
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+/*Pixel perfecting end*/
+
+.appointment-form input::-webkit-input-placeholder {
   color: rgb(0, 0, 0);
 }
 
-/*input:-ms-input-placeholder {
+/*.appointment-form input:-ms-input-placeholder {
   color: rgb(0, 0, 0);
 }
 
-input::-ms-input-placeholder {
+.appointment-form input::-ms-input-placeholder {
   color: rgb(0, 0, 0);
 }
 
-input::-moz-placeholder {
+.appointment-form input::-moz-placeholder {
   color: rgb(0, 0, 0);
 }*/
 
-input::placeholder {
+.appointment-form input::placeholder {
   color: rgb(0, 0, 0);
 }
 
-input:nth-child(2n) {
-  margin-left:20px;
+.appointment-form input:nth-child(2n) {
+  margin-left: 20px;
 }
 
-input:focus {
+.appointment-form input:focus {
   outline: 0;
 }
 
@@ -561,51 +832,149 @@ input:focus {
   width: 300px;
 }
 
+.item-photo-gallery,
+.item-information {
+  float: left;
+  width: 460px;
+  margin: 0 10px 49px;
+}
+
+.item-photo-gallery {
+  margin-top: 54px;
+}
+
+.item-photo-gallery img {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/*Two uses of :(not), if they used separated by commas, dosnt work*/
+
+.item-photo-gallery img:not(:first-child) {
+  float: left;
+  margin: 14px 20px 0 0;
+}
+
+.item-photo-gallery img:last-child {
+  float: right;
+  margin-right: 0;
+}
+
+.item-information {
+  box-sizing: border-box;
+  margin-top: 73px;
+  padding-left: 70px;
+}
+
+.item-article {
+  display: inline-block;
+  float: right;
+  margin-right: 12px;
+
+  color: rgb(174, 174, 174);
+}
+
+.item-information p {
+  margin-top: 29px;
+}
+
+.item-information .price-and-buy {
+  margin: 0;
+  margin-top: 36px;
+  margin-bottom: 64px;
+}
+
+.item-information h2 {
+  margin: 0;
+  margin-bottom: 30px;
+
+  line-height: 1;
+}
+
+.item-information ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.item-information li {
+  display: block;
+  padding-left: -1px;
+}
+
+.item-information li::before {
+  content: "";
+
+  display: block;
+  float: left;
+  width: 7px;
+  height: 7px;
+  margin: 9px 12px 0 2px;
+
+  background-color: black;
+  transform: rotate(45deg);
+}
+
 .main-footer {
+  color: white;
+
   background-color: rgb(36, 36, 36);
   background-image: url(../img/footer-background.jpg);
+  background-repeat: repeat;
   /*Here is took .jpg background image because of smaller size of file instead of .png*/
   background-position: top left;
-  background-repeat: repeat;
-  color: white;
+}
+
+.alternative-footer {
+  box-shadow: inset 0 25px 50px -10px black;
 }
 
 .main-footer a {
-    color: white;
+  color: white;
 }
 
 .main-footer p {
   margin: 0;
-  padding: 0;
-  line-height: 100%;
   margin-bottom: 19px;
+  padding: 0;
+
+  line-height: 100%;
   text-align: center;
 }
 
 .footer-contacts {
-  float:left;
+  float: left;
   width: 310px;
-  margin: 65px 10px 45px;
+  margin: 57px 10px 45px;
+}
+
+.footer-contacts p {
+  padding: 0;
+
+  line-height: 24px;
+  text-align: left;
 }
 
 .footer-social {
-  float:left;
-  margin: 65px 10px 53px 80px;
+  float: left;
+  margin: 62px 10px 53px 80px;
 }
 
 .footer-copyright {
-  float:right;
-  margin: 65px 10px 53px;
+  float: right;
+  margin: 62px 10px 53px;
 }
 
 .social-btn {
   display: block;
-  font-size: 0;
   float: left;
-  background-color: black;
-  height: 43px;
   width: 43px;
+  height: 43px;
   margin-right: 6px;
+
+  font-size: 0;
+
+  background-color: black;
 }
 
 .social-btn:last-child {
@@ -614,21 +983,35 @@ input:focus {
 
 .social-btn-vk {
   background-image: url(../img/vk-logo.png);
-  background-position: center center;
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: auto;
 }
 
 .social-btn-fb {
   background-image: url(../img/facebook-logo.png);
-  background-position: center center;
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: auto;
 }
 
 .social-btn-inst {
   background-image: url(../img/insta-logo.png);
-  background-position: center center;
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: auto;
+}
+
+.social-btn-vk:hover,
+.social-btn-fb:hover,
+.social-btn-inst:hover {
+  filter: invert(100%);
+}
+
+/*inversing htmlacademy btn has a blue background*/
+
+.footer-copyright a.btn:hover {
+  color: black;
+
+  background-color: white;
 }
