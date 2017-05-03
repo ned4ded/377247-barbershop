@@ -86,7 +86,7 @@ h2 {
 }
 
 .main-navigation a,
-.user-block a {
+.login {
   display: block;
   padding: 24px 20px 28px;
 
@@ -95,6 +95,12 @@ h2 {
   text-align: center;
   color: white;
   text-decoration: none;
+}
+
+.login {
+  padding: 26px 20px 26px;
+
+  opacity: 1;
 }
 
 a.current-main-nav-name {
@@ -443,22 +449,6 @@ span.current-breadcrumbs-item {
   margin-right: 7px;
 }
 
-/*.btn-pagination {
-  display: block;
-  float: left;
-  width: 43px;
-  height: 27px;
-  margin-right: 9px;
-  padding-top: 16px;
-
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
-  color: white;
-
-  background-color: black;
-}*/
-
 .pagination .btn {
   display: block;
   float: left;
@@ -635,7 +625,7 @@ span.current-breadcrumbs-item {
 .index-content {
   max-width: 940px;
   margin: 35px 10px 0;
-  padding: 45px 80px 50px 81px;
+  padding: 45px 80px 50px 80px;
 
   background-color: white;
 }
@@ -646,7 +636,7 @@ span.current-breadcrumbs-item {
 
 .index-content-left {
   float: left;
-  width: 384px;
+  width: 385px;
 }
 
 .index-content-right {
@@ -661,20 +651,23 @@ span.current-breadcrumbs-item {
 }
 
 .news-preview {
-  margin: 0;
-  margin-bottom: 28px;
+  margin: 0 0 28px 1px;
   padding: 0;
 
   list-style: none;
 }
 
 .index-content-title {
-  margin: 0 0 22px;
+  margin: 0 0 20px;;
 }
 
 /*PP starts */
 div.index-content .index-content-right .index-content-title {
   padding-left: 3px;
+}
+
+.index-content-left .index-content-title {
+  margin-left: 1px;
 }
 
 /*PP ends*/
@@ -689,7 +682,7 @@ div.index-content .index-content-right .index-content-title {
 }
 
 .index-content li {
-  margin: 0 0 20px;
+  margin: 0 0 21px;
 }
 
 
@@ -699,11 +692,13 @@ div.index-content .index-content-right .index-content-title {
   max-width: 300px;
   max-height: 178px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   padding: 0;
 }
 
 .gallery-content img {
+  margin-top: 2px;
+
   border: 7px solid white;
 }
 
@@ -736,6 +731,23 @@ div.index-content .index-content-right .index-content-title {
 .filter-submit {
   padding: 9px 27px 10px 33px;
 }
+
+.index-content:nth-child(3n) > .index-content-left > .btn {
+  margin-top: 1px;
+}
+
+.index-content:nth-child(4n) > .index-content-left > .btn {
+  margin-top: 3px;
+  padding-top: 9px;
+}
+
+.index-content:nth-child(4n) > .index-content-left > .btn:nth-child(5) {
+  margin-left: 18px;
+}
+
+.footer-copyright .btn {
+  padding-top: 9px;
+}
 /*pp ends*/
 
 .btn:hover {
@@ -758,6 +770,7 @@ div.index-content .index-content-right .index-content-title {
 }
 
 .index-content-left > p {
+  margin-left: 1px;
   padding-bottom: 20px;
 }
 
@@ -771,11 +784,21 @@ div.index-content .index-content-right .index-content-title {
   width: 301px;
   padding-left: 94px;
 }
+
+.index-content:last-child > .index-content-right > p {
+  padding-left: 3px;
+}
 /*Pixel perfecting end*/
 
 .index-content-right > p {
   padding-bottom: 22px;
 }
+
+/*PP starts*/
+.appointment-form {
+  padding-left: 1px;
+}
+/*PP ends*/
 
 .appointment-form input {
   float: left;
@@ -830,6 +853,7 @@ div.index-content .index-content-right .index-content-title {
 
 .appointment-form > .btn {
   width: 300px;
+  padding-bottom: 9px;
 }
 
 .item-photo-gallery,
@@ -899,7 +923,6 @@ div.index-content .index-content-right .index-content-title {
 
 .item-information li {
   display: block;
-  padding-left: -1px;
 }
 
 .item-information li::before {
@@ -942,10 +965,21 @@ div.index-content .index-content-right .index-content-title {
   text-align: center;
 }
 
+/*PP Starts*/
+
+.footer-copyright p,
+.footer-social p {
+  margin-bottom: 20px;
+}
+.footer-social p {
+  margin-left: 1px;
+}
+/*PP ends*/
+
 .footer-contacts {
   float: left;
   width: 310px;
-  margin: 57px 10px 45px;
+  margin: 58px 11px 45px 11px;
 }
 
 .footer-contacts p {
@@ -957,12 +991,13 @@ div.index-content .index-content-right .index-content-title {
 
 .footer-social {
   float: left;
-  margin: 62px 10px 53px 80px;
+  margin: 63px 10px 53px 78px;
 }
+
 
 .footer-copyright {
   float: right;
-  margin: 62px 10px 53px;
+  margin: 63px 10px 53px;
 }
 
 .social-btn {
