@@ -7,8 +7,10 @@ body > * > * > * {
 body > *::before,
 body > * > *::before,
 body > * > * > *::before {
-  content: attr(class);
+  /*content: attr(class);*/
+  content: "";
   position: absolute;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -21,10 +23,12 @@ body > * {
 }
 
 body > *::before {
-  color: white;
-  background: green;
-  left: 0;
   top: 0;
+  left: 0;
+
+  color: white;
+
+  background: green;
 }
 
 /*body > *::after {
@@ -39,10 +43,12 @@ body > * > * {
 }
 
 body > * > *::before {
-  color: white;
-  background: rgb(255, 45, 82);
-  right: 0;
   top: 0;
+  right: 0;
+
+  color: white;
+
+  background: rgb(255, 45, 82);
 }
 
 body > * > * > * {
@@ -51,10 +57,12 @@ body > * > * > * {
 }
 
 body > * > * > *::before {
-  background: blue;
-  color: white;
   bottom: -24px;
   left: -2px;
+
+  color: white;
+
+  background: blue;
 }
 
 /*.main-header::before {
