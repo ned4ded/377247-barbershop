@@ -22,7 +22,7 @@
             <a href="#">Новости</a>
           </li>
           <li>
-            <a href="#">Прайс-лист</a>
+            <a href="price.html">Прайс-лист</a>
           </li>
           <li>
             <a href="catalog.html">Магазин</a>
@@ -38,14 +38,12 @@
     </div>
   </header>
   <main class="container clearfix">
-    <!-- Change div to a without href, webinar 3 -->
     <div class="index-logo">
       <img src="img/borodinski-logo-index.png" alt="Барбершоп &laquo;Бородинский&raquo;" width="368" height="204" />
     </div>
     <section class="features">
       <div class="features-item">
         <h2 class="features-name">Быстро</h2>
-        <!-- The paragraph below is containing a writing mistake in the word "обладатель". That's copying the layout's mistake. -->
         <p>
           Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладетель стильной стрижки-минутки!
         </p>
@@ -58,7 +56,6 @@
       </div>
       <div class="features-item">
         <h2 class="features-name">Дорого</h2>
-        <!-- The paragraph below is containing a writing mistake in the word "определенный". That's copying the layout's mistake. Also, the letter "Ё" doesn't contain upside dots. -->
         <p>
           Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определеный статус?
         </p>
@@ -87,11 +84,11 @@
         <h2 class="index-content-title">Фотогалерея</h2>
         <div class="gallery">
           <figure class="gallery-content" >
-
-            <a href="#"><img src="img/gallery-1st-photo.jpg" width="286" height="164" alt="Изображение из фотогалереи 1" /></a>
+            <a class="gallery__img" href="#"><img src="img/gallery-1st-photo.jpg" width="286" height="164" alt="Изображение из фотогалереи 1" /></a>
+            <a class="gallery__img" href="#"><img src="https://picsum.photos/286/164/?image=11" width="286" height="164" alt="Изображение из фотогалереи 1" /></a>
+            <a class="gallery__img" href="#"><img src="https://picsum.photos/286/164/?image=12" width="286" height="164" alt="Изображение из фотогалереи 1" /></a>
+            <a class="gallery__img" href="#"><img src="https://picsum.photos/286/164/?image=13" width="286" height="164" alt="Изображение из фотогалереи 1" /></a>
           </figure>
-          <button class="btn gallery-prev" type="button">Назад</button>
-          <button class="btn gallery-next" type="button">Вперёд</button>
         </div>
       </div>
     </div>
@@ -104,7 +101,7 @@
         <p>
           Время работы:<br /> пн — пт: с 10:00 до 22:00<br /> сб — вс: с 10:00 до 19:00
         </p>
-        <a class="btn" href="#">Как проехать</a>
+        <a class="btn map-open-btn" href="#">Как проехать</a>
         <a class="btn" href="#">Обратная связь</a>
       </div>
       <div class="index-content-right">
@@ -145,6 +142,29 @@
       </section>
     </div>
   </footer>
+
+  <div class="login-modal">
+    <h2 class="login-modal__heading">Личный кабинет</h2>
+    <p class="login-modal__info">Введите пожалуйста свой логин и пароль</p>
+    <form action="https://echo.htmlacademy.ru" method="POST" class="login-modal__form">
+      <input class="icon-user" type="text" name="login" placeholder="Логин">
+      <input class="icon-password" type="password"  name="password" placeholder="Пароль">
+      <label class="login-checkbox">
+        <input type="checkbox" name="remember">
+        <span class="checkbox-indicator"></span>
+        Запомните меня
+      </label>
+      <a class="restore" href="#">Я забыл пароль!</a>
+      <button class="btn" type="submit">Войти</button>
+    </form>
+    <button class="login-modal__close" type="button" title="Закрыть">Закрыть</button>
+  </div>
+  <div class="map-modal">
+    <button class="map-modal__close" type="button" title="Закрыть">Закрыть</button>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="766" height="561" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  <div class="modal-overlay"></div>
+  <script src="js/common.js"></script>
 </body>
 
 </html>

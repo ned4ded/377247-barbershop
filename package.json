@@ -1,0 +1,23 @@
+{
+  "name": "377247-barbershop",
+  "version": "1.0.0",
+  "description": "* Студент: [Евгений Баженов](https://up.htmlacademy.ru/htmlcss/17/user/377247).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ned4ded/377247-barbershop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ned4ded/377247-barbershop/issues"
+  },
+  "homepage": "https://github.com/ned4ded/377247-barbershop#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
+  }
+}

@@ -23,7 +23,7 @@
             <a href="#">Новости</a>
           </li>
           <li>
-            <a href="#">Прайс-лист</a>
+            <a href="price.html">Прайс-лист</a>
           </li>
           <li>
             <a class="current-main-nav-name">Магазин</a>
@@ -53,52 +53,57 @@
         </li>
       </ul>
     </div>
-    <!-- Add aside / read bout it  -->
     <form class="filter-box" action="#" method="get" id="filter-form">
-      <!-- Change div to fieldset -->
       <div class="filter-manufecturer">
-        <!-- change h2 to legend -->
         <h2>Производители:</h2>
-        <!-- Try to use ul or p on label + input  -->
-        <label>
-          <!-- Try to use position: absolute in tag with position:relative to avoid using of margin for checkbox cross -->
-            <input type="checkbox" name="manufecturer"  id="manufecturer-1" value="1"/>
-            Baxter of California
-        </label>
-        <label>
-            <input type="checkbox" name="manufecturer"  id="manufecturer-2" value="2"/>
-            Mr Natty
-        </label>
-        <label>
-            <input type="checkbox" name="manufecturer"  id="manufecturer-3" value="3"/>
-            Suavecito
-        </label>
-        <label>
-            <input type="checkbox" name="manufecturer"  id="manufecturer-4" value="4"/>
-            Malin+Goetz
-        </label>
-        <label>
-            <input type="checkbox" name="manufecturer"  id="manufecturer-5" value="5"/>
-            Murray's
-        </label>
-        <label>
-            <input type="checkbox" name="manufecturer"  id="manufecturer-6" value="6"/>
-            American crew
-        </label>
+
+        <div class="filter-manufecturer__item">
+          <input type="checkbox" id="manufecturer-1" name="manufecturer" value="1">
+          <label for="manufecturer-1">Baxter of California</label>
+        </div>
+
+        <div class="filter-manufecturer__item">
+          <input type="checkbox" id="manufecturer-2" name="manufecturer" value="2">
+          <label for="manufecturer-2">Mr Natty</label>
+        </div>
+
+        <div class="filter-manufecturer__item">
+          <input type="checkbox" id="manufecturer-3" name="manufecturer" value="3">
+          <label for="manufecturer-3">Suavecito</label>
+        </div>
+
+        <div class="filter-manufecturer__item">
+          <input type="checkbox" id="manufecturer-4" name="manufecturer" value="4">
+          <label for="manufecturer-4">Malin+Goetz</label>
+        </div>
+
+        <div class="filter-manufecturer__item">
+          <input type="checkbox" id="manufecturer-5" name="manufecturer" value="5">
+          <label for="manufecturer-5">Murray's</label>
+        </div>
+
+        <div class="filter-manufecturer__item">
+          <input type="checkbox" id="manufecturer-6" name="manufecturer" value="6">
+          <label for="manufecturer-6">American crew</label>
+        </div>
       </div>
       <div class="filter-categories">
         <h2>Группы товаров:</h2>
 
-        <input type="radio" name="category" id="category-1" value="1" />
-        <label for="category-1">Бритвенные принадлежности</label>
+        <div class="filter-categories__item">
+          <input type="radio" name="category" id="category-1" value="1" />
+          <label for="category-1">Бритвенные принадлежности</label>
+        </div>
 
+        <div class="filter-categories__item">
+          <input type="radio" name="category" id="category-2" value="2" checked/>
+          <label for="category-2">Средства для ухода</label>
+        </div>
 
-        <input type="radio" name="category" id="category-2" value="2" checked/>
-        <label for="category-2">Средства для ухода</label>
-
-
-        <input type="radio" name="category" id="category-3" value="3" />
-        <label for="category-3">Аксeссуары</label>
+        <div class="filter-categories__item">
+          <input type="radio" name="category" id="category-3" value="3" />
+          <label for="category-3">Аксeссуары</label>
+        </div>
 
         <input type="submit" class="filter-submit btn" value="Показать" />
       </div>
@@ -107,7 +112,6 @@
       <article class="shop-item">
         <a href="catalog-item.html"><img src="img/1st-good-img.jpg" alt="Картинка товара 1" width="220" height="165" /></a>
         <a class="item-name-link" href="catalog-item.html">
-          <!-- Put in h2?!(or h1) and change p to span -->
           <p>
             Набор для путешествий
           </p>
